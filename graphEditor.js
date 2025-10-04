@@ -21,14 +21,16 @@ class GraphEditor {
       this.canvas.addEventListener("mouseup", () => this.dragging = false);
    }
 
-   #handleMouseMove(evt) {
-      this.mouse = this.viewPort.getMouse(evt);
-      this.hovered = getNearestPoint(this.mouse, this.graph.points, 10 * this.viewPort.zoom);
-      if (this.dragging == true) {
-         this.selected.x = this.mouse.x;
-         this.selected.y = this.mouse.y;
-      }
-   }
+#handleMouseMove(evt) {
+  this.mouse = this.viewPort.getMouse(evt);
+  this.hovered = getNearestPoint(this.mouse, this.graph.points, 10 * this.viewPort.zoom);
+
+  if (this.dragging) {
+    this.selected.x = this.mouse.x;
+    this.selected.y = this.mouse.y;
+  }
+}
+
 
    #handleMouseDown(evt) {
       if (evt.button == 2) { // right click
