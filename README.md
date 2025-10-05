@@ -15,6 +15,10 @@ When you create a point, a dotted line will dynamically follow your cursor, allo
 If you decide not to continue the line, right-click to cancel the current connection.
 The point will remain on the canvas, and you can start drawing a new line or create another standalone point.
 
+Dragging the point & lines:
+By clicking and holding the left mouse button on a point, you can drag it to a new position.
+Any lines connected to that point automatically follow the movement, just like when drawing a new line
+
 Saving and Clearing the Canvas:
 Dedicated buttons are provided to save or clear your work.
 
